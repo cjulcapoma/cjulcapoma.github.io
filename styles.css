@@ -108,6 +108,8 @@ h1 {
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 10px;
+    justify-content: space-between;
+    align-items: left;
 }
 .skill-tag {
     background-color: #f5f5f5;
