@@ -1,0 +1,324 @@
+[
+  {
+    "id": 1,
+    "titulo": "Fundamentos de gestión de proyectos",
+    "plataforma": "LinkedIn Learning",
+    "categoria": "IT Project Manager",
+    "formato": "Curso",
+    "idioma": "ES",
+    "url": "https://www.linkedin.com/learning/paths/fundamentos-profesionales-de-gestion-de-proyectos-por-microsoft-y-linkedin",
+    "tags": [
+      "Project Management",
+      "Leadership"
+    ]
+  },
+  {
+    "id": 2,
+    "titulo": "Introducción a Docker",
+    "plataforma": "YouTube",
+    "categoria": "DevOps Engineer",
+    "formato": "Tutorial",
+    "idioma": "EN",
+    "url": "https://www.youtube.com/watch?v=3c-iBn73dDE",
+    "tags": [
+      "Docker",
+      "DevOps",
+      "Infrastructure"
+    ]
+  },
+  {
+    "id": 3,
+    "titulo": "Gestión de Proyectos y Fundamentos de metodología Agile",
+    "plataforma": "Santander Open Academy",
+    "categoria": "IT Project Manager",
+    "formato": "Curso",
+    "idioma": "ES",
+    "url": "https://lms.santanderopenacademy.com/courses/171",
+    "tags": [
+      "Project Management",
+      "Agile"
+    ]
+  },
+  {
+    "id": 4,
+    "titulo": "Asociado Desarrollador de Azure",
+    "plataforma": "Microsoft Learn",
+    "categoria": "Software Engineer",
+    "formato": "Tutorial",
+    "idioma": "ES",
+    "url": "https://learn.microsoft.com/es-es/credentials/certifications/azure-developer/",
+    "tags": [
+      "Azure",
+      "Development",
+      "Cloud"
+    ]
+  },
+  {
+    "id": 5,
+    "titulo": "Fundamentos de GitHub",
+    "plataforma": "Microsoft Learn",
+    "categoria": "Software Engineer",
+    "formato": "Curso",
+    "idioma": "ES",
+    "url": "https://learn.microsoft.com/es-es/credentials/certifications/github-foundations/?practice-assessment-type=certification",
+    "tags": [
+      "GitHub",
+      "Version Control",
+      "Development"
+    ]
+  },
+  {
+    "id": 6,
+    "titulo": "Ingeniero Asociado de IA de Azure",
+    "plataforma": "Microsoft Learn",
+    "categoria": "AI Engineer",
+    "formato": "Curso",
+    "idioma": "ES",
+    "url": "https://learn.microsoft.com/es-es/credentials/certifications/azure-ai-engineer/",
+    "tags": [
+      "Azure",
+      "AI",
+      "Cloud"
+    ]
+  },
+  {
+    "id": 7,
+    "titulo": "Aspectos básicos de Azure AI",
+    "plataforma": "Microsoft Learn",
+    "categoria": "AI Engineer",
+    "formato": "Curso",
+    "idioma": "ES",
+    "url": "https://learn.microsoft.com/es-es/credentials/certifications/azure-ai-fundamentals/",
+    "tags": [
+      "Azure",
+      "AI",
+      "Fundamentals"
+    ]
+  },
+  {
+    "id": 8,
+    "titulo": "GitHub Actions",
+    "plataforma": "Microsoft Learn",
+    "categoria": "DevOps Engineer",
+    "formato": "Curso",
+    "idioma": "ES",
+    "url": "https://learn.microsoft.com/es-es/credentials/certifications/github-actions/",
+    "tags": [
+      "GitHub",
+      "DevOps",
+      "CI/CD"
+    ]
+  },
+  {
+    "id": 9,
+    "titulo": "GitHub Copilot",
+    "plataforma": "Microsoft Learn",
+    "categoria": "Software Engineer",
+    "formato": "Curso",
+    "idioma": "ES",
+    "url": "https://learn.microsoft.com/es-es/credentials/certifications/github-copilot/",
+    "tags": [
+      "GitHub",
+      "Copilot",
+      "AI"
+    ]
+  },
+  {
+    "id": 10,
+    "titulo": "Experto en Ingeniería DevOps",
+    "plataforma": "Microsoft Learn",
+    "categoria": "DevOps Engineer",
+    "formato": "Curso",
+    "idioma": "ES",
+    "url": "https://learn.microsoft.com/es-es/credentials/certifications/devops-engineer/",
+    "tags": [
+      "Azure",
+      "DevOps",
+      "Engineering"
+    ]
+  },
+  {
+    "id": 11,
+    "titulo": "Asociado en Ciencia de Datos de Azure",
+    "plataforma": "Microsoft Learn",
+    "categoria": "Data Scientist",
+    "formato": "Curso",
+    "idioma": "ES",
+    "url": "https://learn.microsoft.com/es-es/credentials/certifications/azure-data-scientist/",
+    "tags": [
+      "Azure",
+      "Data Science",
+      "ML"
+    ]
+  },
+  {
+    "id": 12,
+    "titulo": "Aspectos básicos de Azure",
+    "plataforma": "Microsoft Learn",
+    "categoria": "Cloud Architect",
+    "formato": "Curso",
+    "idioma": "ES",
+    "url": "https://learn.microsoft.com/es-es/credentials/certifications/azure-fundamentals/",
+    "tags": [
+      "Azure",
+      "Cloud",
+      "Fundamentals"
+    ]
+  },
+  {
+    "id": 13,
+    "titulo": "Cloud Digital Leader Learning Path",
+    "plataforma": "Google Skills Boost",
+    "categoria": "Cloud Architect",
+    "formato": "Learning Path",
+    "idioma": "EN",
+    "url": "https://www.cloudskillsboost.google/paths/9",
+    "tags": [
+      "Google Cloud",
+      "Cloud",
+      "Fundamentals"
+    ]
+  },
+  {
+    "id": 14,
+    "titulo": "Introducción a la Ciberseguridad",
+    "plataforma": "Cisco Networking Academy",
+    "categoria": "Security Engineer",
+    "formato": "Curso",
+    "idioma": "ES",
+    "url": "https://www.netacad.com/es/courses/introduction-to-cybersecurity?courseLang=es-XL",
+    "tags": [
+      "Cybersecurity",
+      "Security"
+    ]
+  },
+  {
+    "id": 15,
+    "titulo": "Introduction to Greenhouse Gas Accounting for IT",
+    "plataforma": "Cisco Networking Academy",
+    "categoria": "IT Project Manager",
+    "formato": "Curso",
+    "idioma": "EN",
+    "url": "https://www.netacad.com/es/courses/introduction-to-greenhouse-gas-accounting-for-it?courseLang=en-US",
+    "tags": [
+      "Sustainability",
+      "Environment",
+      "Greenhouse Gas"
+    ]
+  },
+  {
+    "id": 16,
+    "titulo": "Cybersecurity Skills, Simplified: A Framework That Works",
+    "plataforma": "The Linux Foundation",
+    "categoria": "Security Engineer",
+    "formato": "Webinar",
+    "idioma": "EN",
+    "url": "https://www.linuxfoundation.org/webinars/cybersecurity-skills-simplified-a-framework-that-works?hsLang=en",
+    "tags": [
+      "Cybersecurity",
+      "Security"
+    ]
+  },
+  {
+    "id": 17,
+    "titulo": "Become an OCI Generative AI Professional (2025)",
+    "plataforma": "Oracle University",
+    "categoria": "AI Engineer",
+    "formato": "Learning Path",
+    "idioma": "EN",
+    "url": "https://mylearn.oracle.com/ou/learning-path/become-an-oci-generative-ai-professional-2025/147863",
+    "tags": [
+      "OCI",
+      "Generative AI"
+    ]
+  },
+  {
+    "id": 18,
+    "titulo": "Oracle Fusion Cloud Applications ERP Process Essentials",
+    "plataforma": "Oracle University",
+    "categoria": "ERP Engineer",
+    "formato": "Learning Path",
+    "idioma": "EN",
+    "url": "https://mylearn.oracle.com/ou/learning-path/get-certified-oracle-fusion-cloud-applications-erp-process-essentials/146907",
+    "tags": [
+      "ERP",
+      "Fusion Cloud"
+    ]
+  },
+  {
+    "id": 19,
+    "titulo": "Introduction to DevSecOps for Managers (LFS180)",
+    "plataforma": "The Linux Foundation",
+    "categoria": "DevOps Engineer",
+    "formato": "Learning Path",
+    "idioma": "EN",
+    "url": "https://trainingportal.linuxfoundation.org/learn/course/introduction-to-devsecops-for-managers-lfs180/introduction/course-information",
+    "tags": [
+      "DevOps",
+      "Security"
+    ]
+  },
+  {
+    "id": 20,
+    "titulo": "AWS Cloud Practitioner Essentials",
+    "plataforma": "AWS Skill Builder",
+    "categoria": "Cloud Engineer",
+    "formato": "Curso",
+    "idioma": "EN",
+    "url": "https://skillbuilder.aws/learn/94T2BEN85A/aws-cloud-practitioner-essentials/8D79F3AVR7",
+    "tags": [
+      "AWS",
+      "Cloud"
+    ]
+  },
+  {
+    "id": 21,
+    "titulo": "Introduction to FinOps",
+    "plataforma": "FinOps",
+    "categoria": "Cloud Engineer",
+    "formato": "Curso",
+    "requiere_corporativo": true,
+    "idioma": "EN",
+    "url": "https://learn.finops.org/introduction-to-finops",
+    "tags": [
+      "FinOps",
+      "Cloud"
+    ]
+  },
+  {
+    "id": 22,
+    "titulo": "Introduction to the Spring Professional Learning Path",
+    "plataforma": "Spring Academy",
+    "categoria": "Spring Engineer",
+    "formato": "Learning Path",
+    "idioma": "EN",
+    "url": "https://spring.academy/courses/spring-introduction",
+    "tags": [
+      "Java"
+    ]
+  },
+  {
+    "id": 23,
+    "titulo": "Fundamentos de Power BI",
+    "plataforma": "DataCamp",
+    "categoria": "Data Engineer",
+    "formato": "Learning Path",
+    "idioma": "ES",
+    "url": "https://app.datacamp.com/learn/skill-tracks/power-bi-fundamentals",
+    "tags": [
+      "Power BI"
+    ]
+  },
+  {
+    "id": 24,
+    "titulo": "Registred Scrum Basics",
+    "plataforma": "Aprende Scrum",
+    "categoria": "IT Project Manager",
+    "formato": "Learning Path",
+    "idioma": "ES",
+    "url": "https://www.aprendescrum.com/products/registered-scrum-basics",
+    "tags": [
+      "Scrum"
+    ]
+  }
+]

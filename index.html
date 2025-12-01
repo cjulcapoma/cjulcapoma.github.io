@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Carlos Julcapoma</title>
+    <meta name="description"
+        content="Portafolio de aplicaciones web de Carlos Julcapoma, desarrolladas con Gemini Code Assistant.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <!-- Social preview (OpenGraph/Twitter) -->
+    <meta property="og:image" content="banner-social-1200x630.jpg">
+    <meta name="twitter:image" content="banner-social-1200x630.jpg">
+    <style>
+        :root {
+            /* Enterprise Slate Theme - Lighter Dark Mode */
+            --color-dark-bg: #1e293b;
+            /* Slate 800 */
+            --color-dark-surface: #334155;
+            /* Slate 700 */
+            --color-light-bg: #f8fafc;
+            --color-light-text: #0f172a;
+            --color-light-text-secondary: #475569;
+            --color-dark-text: #f1f5f9;
+            /* Slate 100 */
+            --color-dark-text-secondary: #cbd5e1;
+            /* Slate 300 - Improved Contrast */
+            --color-accent: #38bdf8;
+            /* Sky 400 */
+            --color-border: #475569;
+            /* Slate 600 */
+            --border-radius: 12px;
+
+            /* Spacing */
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            background-color: var(--color-dark-bg);
+            /* site-wide decorative background (SVG) */
+            background-image: url('assets/bg-banner.svg');
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size: cover;
+        }
+
+        .hero-header {
+            background-color: rgba(30, 41, 59, 0.95);
+            /* Slate 800 with opacity */
+            color: var(--color-dark-text);
+            text-align: center;
+            padding: 3rem 1.5rem;
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            /* remove the thick border so the photo looks cleaner */
+            border: none;
+            /* keep a subtle shadow for separation */
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+            margin-bottom: 1rem;
+        }
+
+        .hero-header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .hero-header p {
+            font-size: 1.2rem;
+            color: var(--color-light-text-secondary);
+            margin: 0.5rem 0 1.5rem 0;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 0.5rem;
+        }
+
+        .social-links a {
+            color: var(--color-light-text-secondary);
+            margin: 0;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.03);
+            font-weight: 500;
+        }
+
+        .social-links a:hover {
+            color: var(--color-dark-text);
+            border-color: var(--color-accent);
+            background-color: rgba(56, 189, 248, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* svg icons inside social links scale with current color */
+        .social-links svg {
+            width: 18px;
+            height: 18px;
+            display: block;
+            fill: currentColor;
+        }
+
+        .main-content {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .main-content h2 {
+            font-size: 2.5rem;
+            color: var(--color-dark-text);
+            margin-bottom: 1rem;
+        }
+
+        .main-content .main-description {
+            color: var(--color-dark-text-secondary);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: auto auto 2.5rem auto;
+        }
+
+        .app-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: var(--spacing-lg);
+            /* 32px */
+        }
+
+        .app-card {
+            background-color: var(--color-dark-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-md);
+            /* 24px */
+            text-decoration: none;
+            color: var(--color-dark-text);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            width: 300px;
+            /* Slightly wider */
+        }
+
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border-color: var(--color-accent);
+        }
+
+        .app-card h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.5rem;
+            color: var(--color-accent);
+        }
+
+        .app-card p {
+            font-size: 1rem;
+            color: var(--color-dark-text-secondary);
+            margin: 0;
+        }
+
+        /* App Card Icon & CTA */
+        .app-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .app-cta {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--color-accent);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            opacity: 0.8;
+            transition: opacity 0.2s ease;
+        }
+
+        .app-card:hover .app-cta {
+            opacity: 1;
+        }
+
+        /* Section Heading Decoration */
+        .main-content h2 {
+            position: relative;
+            display: inline-block;
+        }
+
+        .main-content h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-accent), #c084fc);
+            border-radius: 2px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--color-dark-text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hero-header">
+        <img src="Foto_Perfil.jpeg" alt="Foto de perfil de Carlos Julcapoma" class="profile-pic">
+        <h1>Carlos Julcapoma</h1>
+        <p>Ingeniero de Sistemas | Apasionado por la tecnología y el aprendizaje continuo.</p>
+        <div class="social-links">
+            <a href="https://github.com/cjulcapoma" target="_blank" rel="noopener noreferrer">
+                <!-- GitHub icon -->
+                <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.6 7.6 0 018 4.6c.68.003 1.36.092 2 .27 1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                </svg>
+                <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/carlos-julcapoma/" target="_blank" rel="noopener noreferrer">
+                <!-- LinkedIn icon -->
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11.75 20h-2.5v-9h2.5v9zm-1.25-10.3c-.8 0-1.45-.66-1.45-1.48 0-.82.65-1.48 1.45-1.48s1.45.66 1.45 1.48c0 .82-.65 1.48-1.45 1.48zm12 10.3h-2.5v-4.8c0-1.15-.41-1.93-1.44-1.93-.79 0-1.26.53-1.47 1.04-.07.17-.09.4-.09.62v5.07h-2.5s.03-8.22 0-9h2.5v1.28c.33-.51.92-1.24 2.25-1.24 1.64 0 2.87 1.07 2.87 3.36v5.6z" />
+                </svg>
+                <span>LinkedIn</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <h2>Recursos</h2>
+        <p class="main-description">Una colección de pequeñas recursos web que estoy creando
+            con la ayuda de <strong>Gemini Code Assistant</strong>.</p>
+        <div class="app-list">
+            <a href="./courses/" class="app-card">
+                <span class="app-icon">🎓</span>
+                <h3>Tech Learning Portal</h3>
+                <p>Portal de aprendizaje profesional con rutas y certificaciones</p>
+                <span class="app-cta">Explorar <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg></span>
+            </a>
+            <a href="https://github.com/cjulcapoma/mulesoft-dev-guide" target="_blank" rel="noopener noreferrer"
+                class="app-card">
+                <span class="app-icon">📘</span>
+                <h3>Guía MuleSoft 🏆</h3>
+                <p>Guía para el desarrollo de integraciones con MuleSoft</p>
+                <span class="app-cta">Ver en GitHub <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg></span>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Carlos Julcapoma. Built with Gemini Code Assistant.</p>
+    </footer>
+
+</body>
+
+</html>

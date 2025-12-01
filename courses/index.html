@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Learning Portal - Portafolio de Carlos Julcapoma</title>
+    <meta name="description" content="Una lista curada de cursos online para descubrir y compartir.">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <a href="../" class="back-link">← Volver</a>
+            <h1>Tech Learning Portal</h1>
+        </div>
+        <div class="header-right">
+            <input type="search" id="search-bar" placeholder="Buscar por título...">
+        </div>
+    </header>
+    <main>
+        <!-- Controls container removed as search is now in header -->
+
+        <!-- Controls Bar: Filters and Grouping -->
+        <div id="controls-bar">
+            <div class="filter-group">
+                <label for="filter-platform">Plataforma:</label>
+                <select id="filter-platform">
+                    <option value="">Todas</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="filter-category">Rol:</label>
+                <select id="filter-category">
+                    <option value="">Todos</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="group-by">Agrupar por:</label>
+                <select id="group-by">
+                    <option value="">Ninguno</option>
+                    <option value="plataforma">Plataforma</option>
+                    <option value="categoria">Rol</option>
+                </select>
+            </div>
+        </div>
+        <div id="board-container" class="course-grid"></div>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
