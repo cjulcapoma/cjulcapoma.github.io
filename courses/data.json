@@ -320,5 +320,16 @@
     "tags": [
       "Scrum"
     ]
-  }
+  },
+  {
+    "id": 25,
+    "titulo": "Introducción a Python",
+    "plataforma": "DataCamp",
+    "categoria": "Data Scientist",
+    "formato": "Learning Path",
+    "idioma": "ES",
+    "url": "https://app.datacamp.com/learn/courses/intro-to-python-for-data-science",
+    "tags": [
+      "Python"
+] }
 ]
