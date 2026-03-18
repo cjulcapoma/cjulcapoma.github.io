@@ -331,17 +331,5 @@
     "url": "https://app.datacamp.com/learn/courses/intro-to-python-for-data-science",
     "tags": [
       "Python"
-] },
-  {
-    "id": 26,
-    "titulo": "Ruta de aprendizaje de Cloud Digital Leader",
-    "plataforma": "Google Skills Boost",
-    "categoria": "IT Project Manager",
-    "formato": "Learning Path",
-    "idioma": "EN",
-    "url": "https://www.skills.google/paths/9",
-    "tags": [
-    "Google Cloud","Transformación Digital"
-    ]
-  }
+] }
 ]
