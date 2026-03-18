@@ -331,5 +331,22 @@
     "url": "https://app.datacamp.com/learn/courses/intro-to-python-for-data-science",
     "tags": [
       "Python"
+] },
+  {
+    "id": 26,
+    "titulo": "Claude 101",
+    "plataforma": "Anthropic Academy",
+    "categoria": "IT Project Manager",
+    "formato": "Curso",
+    "idioma": "EN",
+    "url": "https://anthropic.skilljar.com/claude-101",
+    "tags": [
+      "Claude"
 ] }
+
+
+
+
+
+
 ]
