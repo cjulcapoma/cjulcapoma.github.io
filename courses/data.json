@@ -2,6 +2,9 @@
   {
     "id": 1,
     "titulo": "Fundamentos de gestión de proyectos",
+    "descripcion": "Aprende los principios esenciales de gestión de proyectos con metodologías modernas. Ideal para iniciar en el rol de IT Project Manager.",
+    "nivel": "Básico",
+    "costo": "Gratis",
     "plataforma": "LinkedIn Learning",
     "categoria": "IT Project Manager",
     "formato": "Curso",
@@ -15,6 +18,9 @@
   {
     "id": 2,
     "titulo": "Introducción a Docker",
+    "descripcion": "Comprende los conceptos de contenedores y aprende a usar Docker desde cero. Cubre instalación, imágenes, volúmenes y redes.",
+    "nivel": "Básico",
+    "costo": "Gratis",
     "plataforma": "YouTube",
     "categoria": "DevOps Engineer",
     "formato": "Tutorial",
@@ -29,6 +35,9 @@
   {
     "id": 3,
     "titulo": "Gestión de Proyectos y Fundamentos de metodología Agile",
+    "descripcion": "Explora la gestión de proyectos tradicional combinada con enfoques ágiles como Scrum y Kanban.",
+    "nivel": "Básico",
+    "costo": "Gratis",
     "plataforma": "Santander Open Academy",
     "categoria": "IT Project Manager",
     "formato": "Curso",
@@ -42,6 +51,9 @@
   {
     "id": 4,
     "titulo": "Asociado Desarrollador de Azure",
+    "descripcion": "Prepárate para la certificación AZ-204 de Microsoft. Cubre desarrollo de soluciones en la nube con Azure.",
+    "nivel": "Avanzado",
+    "costo": "Gratis",
     "plataforma": "Microsoft Learn",
     "categoria": "Software Engineer",
     "formato": "Tutorial",
@@ -56,6 +68,9 @@
   {
     "id": 5,
     "titulo": "Fundamentos de GitHub",
+    "descripcion": "Domina el control de versiones con Git y GitHub. Incluye repositorios, pull requests, ramas y flujos de colaboración.",
+    "nivel": "Básico",
+    "costo": "Gratis",
     "plataforma": "Microsoft Learn",
     "categoria": "Software Engineer",
     "formato": "Curso",
@@ -70,6 +85,9 @@
   {
     "id": 6,
     "titulo": "Ingeniero Asociado de IA de Azure",
+    "descripcion": "Prepárate para la certificación AI-102 de Microsoft. Cubre servicios de IA de Azure como visión, lenguaje y bots.",
+    "nivel": "Avanzado",
+    "costo": "Gratis",
     "plataforma": "Microsoft Learn",
     "categoria": "AI Engineer",
     "formato": "Curso",
@@ -84,6 +102,9 @@
   {
     "id": 7,
     "titulo": "Aspectos básicos de Azure AI",
+    "descripcion": "Introducción a los conceptos de inteligencia artificial y machine learning en la plataforma Azure. Certificación AI-900.",
+    "nivel": "Básico",
+    "costo": "Gratis",
     "plataforma": "Microsoft Learn",
     "categoria": "AI Engineer",
     "formato": "Curso",
@@ -98,6 +119,9 @@
   {
     "id": 8,
     "titulo": "GitHub Actions",
+    "descripcion": "Automatiza flujos de CI/CD con GitHub Actions. Aprende a crear workflows, triggers y jobs para tus repositorios.",
+    "nivel": "Intermedio",
+    "costo": "Gratis",
     "plataforma": "Microsoft Learn",
     "categoria": "DevOps Engineer",
     "formato": "Curso",
@@ -112,6 +136,9 @@
   {
     "id": 9,
     "titulo": "GitHub Copilot",
+    "descripcion": "Aprende a usar GitHub Copilot para acelerar tu desarrollo con asistencia de IA integrada en tu editor.",
+    "nivel": "Intermedio",
+    "costo": "Gratis",
     "plataforma": "Microsoft Learn",
     "categoria": "Software Engineer",
     "formato": "Curso",
@@ -126,6 +153,9 @@
   {
     "id": 10,
     "titulo": "Experto en Ingeniería DevOps",
+    "descripcion": "Prepárate para la certificación AZ-400 de Microsoft. Cubre integración continua, entrega y monitoreo en Azure.",
+    "nivel": "Avanzado",
+    "costo": "Gratis",
     "plataforma": "Microsoft Learn",
     "categoria": "DevOps Engineer",
     "formato": "Curso",
@@ -140,6 +170,9 @@
   {
     "id": 11,
     "titulo": "Asociado en Ciencia de Datos de Azure",
+    "descripcion": "Certificación DP-100 de Microsoft. Aprende a diseñar y entrenar modelos de ML con Azure Machine Learning.",
+    "nivel": "Avanzado",
+    "costo": "Gratis",
     "plataforma": "Microsoft Learn",
     "categoria": "Data Scientist",
     "formato": "Curso",
@@ -154,6 +187,9 @@
   {
     "id": 12,
     "titulo": "Aspectos básicos de Azure",
+    "descripcion": "Introducción a los servicios en la nube con Microsoft Azure. Orientado a la certificación AZ-900.",
+    "nivel": "Básico",
+    "costo": "Gratis",
     "plataforma": "Microsoft Learn",
     "categoria": "Cloud Architect",
     "formato": "Curso",
@@ -168,6 +204,9 @@
   {
     "id": 13,
     "titulo": "Cloud Digital Leader Learning Path",
+    "descripcion": "Ruta de aprendizaje de Google Cloud para entender los fundamentos de la transformación digital y los servicios cloud.",
+    "nivel": "Básico",
+    "costo": "Gratis",
     "plataforma": "Google Skills Boost",
     "categoria": "Cloud Architect",
     "formato": "Learning Path",
@@ -182,6 +221,9 @@
   {
     "id": 14,
     "titulo": "Introducción a la Ciberseguridad",
+    "descripcion": "Conoce los conceptos fundamentales de la seguridad informática: amenazas, vulnerabilidades y buenas prácticas.",
+    "nivel": "Básico",
+    "costo": "Gratis",
     "plataforma": "Cisco Networking Academy",
     "categoria": "Security Engineer",
     "formato": "Curso",
@@ -195,6 +237,9 @@
   {
     "id": 15,
     "titulo": "Introduction to Greenhouse Gas Accounting for IT",
+    "descripcion": "Learn how to measure and report greenhouse gas emissions from IT infrastructure and operations.",
+    "nivel": "Básico",
+    "costo": "Gratis",
     "plataforma": "Cisco Networking Academy",
     "categoria": "IT Project Manager",
     "formato": "Curso",
@@ -209,6 +254,9 @@
   {
     "id": 16,
     "titulo": "Cybersecurity Skills, Simplified: A Framework That Works",
+    "descripcion": "Webinar que presenta un framework práctico para desarrollar y evaluar habilidades de ciberseguridad en equipos modernos.",
+    "nivel": "Intermedio",
+    "costo": "Gratis",
     "plataforma": "The Linux Foundation",
     "categoria": "Security Engineer",
     "formato": "Webinar",
@@ -222,6 +270,9 @@
   {
     "id": 17,
     "titulo": "Become an OCI Generative AI Professional (2025)",
+    "descripcion": "Prepárate para la certificación Oracle OCI Generative AI Professional. Cubre LLMs, RAG y agentes de IA sobre OCI.",
+    "nivel": "Avanzado",
+    "costo": "Gratis",
     "plataforma": "Oracle University",
     "categoria": "AI Engineer",
     "formato": "Learning Path",
@@ -235,6 +286,9 @@
   {
     "id": 18,
     "titulo": "Oracle Fusion Cloud Applications ERP Process Essentials",
+    "descripcion": "Prepárate para la certificación Oracle ERP. Cubre procesos financieros y operativos en Oracle Fusion Cloud.",
+    "nivel": "Intermedio",
+    "costo": "Gratis",
     "plataforma": "Oracle University",
     "categoria": "ERP Engineer",
     "formato": "Learning Path",
@@ -248,6 +302,9 @@
   {
     "id": 19,
     "titulo": "Introduction to DevSecOps for Managers (LFS180)",
+    "descripcion": "Introduce los principios de DevSecOps para gestores. Cubre la integración de seguridad en pipelines CI/CD.",
+    "nivel": "Intermedio",
+    "costo": "Gratis",
     "plataforma": "The Linux Foundation",
     "categoria": "DevOps Engineer",
     "formato": "Learning Path",
@@ -261,6 +318,9 @@
   {
     "id": 20,
     "titulo": "AWS Cloud Practitioner Essentials",
+    "descripcion": "Cubre los servicios core de AWS y conceptos cloud para la certificación CLF-C02. Ideal para principiantes en cloud.",
+    "nivel": "Básico",
+    "costo": "Gratis",
     "plataforma": "AWS Skill Builder",
     "categoria": "Cloud Engineer",
     "formato": "Curso",
@@ -274,6 +334,9 @@
   {
     "id": 21,
     "titulo": "Introduction to FinOps",
+    "descripcion": "Aprende los fundamentos de la gestión financiera en la nube y cómo optimizar el gasto cloud con el framework FinOps.",
+    "nivel": "Básico",
+    "costo": "De pago",
     "plataforma": "FinOps",
     "categoria": "Cloud Engineer",
     "formato": "Curso",
@@ -288,6 +351,9 @@
   {
     "id": 22,
     "titulo": "Introduction to the Spring Professional Learning Path",
+    "descripcion": "Inicia con el framework Spring. Cubre Spring Boot, inyección de dependencias y REST APIs con Java.",
+    "nivel": "Básico",
+    "costo": "Gratis",
     "plataforma": "Spring Academy",
     "categoria": "Software Engineer",
     "formato": "Learning Path",
@@ -300,6 +366,9 @@
   {
     "id": 23,
     "titulo": "Fundamentos de Power BI",
+    "descripcion": "Aprende a crear dashboards interactivos y reportes con Power BI. Cubre DAX, modelado de datos y visualizaciones.",
+    "nivel": "Básico",
+    "costo": "De pago",
     "plataforma": "DataCamp",
     "categoria": "Data Engineer",
     "formato": "Learning Path",
@@ -312,6 +381,9 @@
   {
     "id": 24,
     "titulo": "Registred Scrum Basics",
+    "descripcion": "Formación oficial en Scrum. Aprende los roles, eventos y artefactos del framework más popular de gestión ágil.",
+    "nivel": "Básico",
+    "costo": "De pago",
     "plataforma": "Aprende Scrum",
     "categoria": "IT Project Manager",
     "formato": "Learning Path",
@@ -324,6 +396,9 @@
   {
     "id": 25,
     "titulo": "Introducción a Python",
+    "descripcion": "Aprende Python desde cero con enfoque en ciencia de datos. Cubre variables, estructuras, funciones y pandas.",
+    "nivel": "Básico",
+    "costo": "De pago",
     "plataforma": "DataCamp",
     "categoria": "Data Scientist",
     "formato": "Learning Path",
@@ -331,10 +406,14 @@
     "url": "https://app.datacamp.com/learn/courses/intro-to-python-for-data-science",
     "tags": [
       "Python"
-] },
+    ]
+  },
   {
     "id": 26,
     "titulo": "Claude 101",
+    "descripcion": "Introducción al uso de Claude, el asistente de IA de Anthropic. Aprende prompting efectivo y casos de uso prácticos.",
+    "nivel": "Básico",
+    "costo": "Gratis",
     "plataforma": "Anthropic Academy",
     "categoria": "IT Project Manager",
     "formato": "Curso",
@@ -342,11 +421,6 @@
     "url": "https://anthropic.skilljar.com/claude-101",
     "tags": [
       "Claude"
-] }
-
-
-
-
-
-
+    ]
+  }
 ]

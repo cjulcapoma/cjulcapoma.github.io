@@ -286,23 +286,26 @@ select:focus {
 }
 
 .course-card:hover {
-    transform: translateY(-4px);
-    /* Reduced lift */
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+    transform: translateY(-6px);
+    box-shadow:
+        0 20px 40px -8px rgba(0, 0, 0, 0.4),
+        0 0 0 1px var(--color-accent),
+        0 0 20px rgba(56, 189, 248, 0.12);
     border-color: var(--color-accent);
+    cursor: pointer;
 }
 
 .course-card:hover::before {
     opacity: 1;
 }
 
-.course-card a {
+.card-link {
     text-decoration: none;
     color: inherit;
     width: 100%;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    flex: 1;
 }
 
 .card-header {
@@ -426,4 +429,132 @@ select:focus {
 .course-card:hover .card-tag {
     background-color: rgba(255, 255, 255, 0.1);
     color: var(--color-text-primary);
+}
+
+/* Hero Section */
+#hero {
+    padding: 1.5rem 0 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0 0 0.4rem 0;
+    color: var(--color-text-primary);
+}
+
+.hero-subtitle {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+/* Results Counter */
+#results-counter {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 1rem;
+    padding-left: 0.1rem;
+}
+
+/* Card Description */
+.card-description {
+    font-size: 0.82rem;
+    color: var(--color-text-secondary);
+    margin: 0.35rem 0 0 0;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* CTA Button */
+.card-cta {
+    display: block;
+    margin: 0.75rem 0 0;
+    padding: 0.45rem 1rem;
+    background: transparent;
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-cta:hover {
+    background-color: rgba(56, 189, 248, 0.1);
+    box-shadow: 0 0 8px rgba(56, 189, 248, 0.2);
+}
+
+/* Level Badge Variants */
+.meta-tag.nivel-basico {
+    background: rgba(163, 230, 53, 0.12);
+    color: #a3e635;
+    border: 1px solid rgba(163, 230, 53, 0.3);
+}
+
+.meta-tag.nivel-intermedio {
+    background: rgba(251, 191, 36, 0.12);
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.meta-tag.nivel-avanzado {
+    background: rgba(248, 113, 113, 0.12);
+    color: #f87171;
+    border: 1px solid rgba(248, 113, 113, 0.3);
+}
+
+/* Cost Badge Variants */
+.meta-tag.costo-gratis {
+    background: rgba(52, 211, 153, 0.12);
+    color: #34d399;
+    border: 1px solid rgba(52, 211, 153, 0.3);
+}
+
+.meta-tag.costo-depago {
+    background: rgba(251, 146, 60, 0.12);
+    color: #fb923c;
+    border: 1px solid rgba(251, 146, 60, 0.3);
+}
+
+/* Responsive: filters stack on mobile */
+@media (max-width: 767px) {
+    #controls-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.6rem;
+    }
+
+    .filter-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+        width: 100%;
+    }
+
+    .filter-group select {
+        width: 100%;
+        min-width: unset;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+    }
+
+    #search-bar {
+        width: 100%;
+    }
+
+    main {
+        padding: 0 1rem 2rem 1rem;
+    }
 }
