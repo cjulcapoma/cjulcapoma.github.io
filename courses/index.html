@@ -17,11 +17,14 @@
             <h1>Tech Learning Portal</h1>
         </div>
         <div class="header-right">
-            <input type="search" id="search-bar" placeholder="Buscar por título...">
+            <input type="search" id="search-bar" placeholder="Buscar por título, tecnología o plataforma...">
         </div>
     </header>
     <main>
-        <!-- Controls container removed as search is now in header -->
+        <section id="hero">
+            <h2 class="hero-title">Explora el catálogo de cursos</h2>
+            <p class="hero-subtitle">Recursos de aprendizaje para roles tecnológicos en plataformas como Microsoft Learn, LinkedIn Learning, YouTube y más.</p>
+        </section>
 
         <!-- Controls Bar: Filters and Grouping -->
         <div id="controls-bar">
@@ -32,9 +35,26 @@
                 </select>
             </div>
             <div class="filter-group">
-                <label for="filter-category">Rol:</label>
+                <label for="filter-category">Área profesional:</label>
                 <select id="filter-category">
                     <option value="">Todos</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="filter-language">Idioma:</label>
+                <select id="filter-language">
+                    <option value="">Todos</option>
+                    <option value="ES">Español</option>
+                    <option value="EN">Inglés</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="filter-level">Nivel:</label>
+                <select id="filter-level">
+                    <option value="">Todos</option>
+                    <option value="Básico">Básico</option>
+                    <option value="Intermedio">Intermedio</option>
+                    <option value="Avanzado">Avanzado</option>
                 </select>
             </div>
             <div class="filter-group">
@@ -42,10 +62,11 @@
                 <select id="group-by">
                     <option value="">Ninguno</option>
                     <option value="plataforma">Plataforma</option>
-                    <option value="categoria">Rol</option>
+                    <option value="categoria">Área profesional</option>
                 </select>
             </div>
         </div>
+        <div id="results-counter">Mostrando 26 cursos</div>
         <div id="board-container" class="course-grid"></div>
     </main>
     <script src="app.js"></script>

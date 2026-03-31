@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let allCourses = [];
     let activePlatform = null;
     let activeCategory = null;
+    let activeLanguage = null;
+    let activeLevel = null;
 
     const PLATFORM_COLORS = {
         'YouTube': '#FF5252', /* Lighter Red */
@@ -24,7 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'FinOps': '#2DD4BF', /* Teal */
         'Spring Academy': '#A3E635', /* Lime/Spring Green */
         'DataCamp': '#4ADE80', /* Green */
-        'Aprende Scrum': '#60A5FA' /* Blue */
+        'Aprende Scrum': '#60A5FA', /* Blue */
+        'Anthropic Academy': '#D97706' /* Amber */
     };
 
     fetch('data.json')
@@ -41,7 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const platformSelect = document.getElementById('filter-platform');
     const categorySelect = document.getElementById('filter-category');
+    const languageSelect = document.getElementById('filter-language');
+    const levelSelect = document.getElementById('filter-level');
     const groupBySelect = document.getElementById('group-by');
+    const resultsCounter = document.getElementById('results-counter');
 
     // Event Listeners
     searchBar.addEventListener('input', () => renderBoard());
@@ -51,6 +57,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     categorySelect.addEventListener('change', (e) => {
         activeCategory = e.target.value || null;
+        renderBoard();
+    });
+    languageSelect.addEventListener('change', (e) => {
+        activeLanguage = e.target.value || null;
+        renderBoard();
+    });
+    levelSelect.addEventListener('change', (e) => {
+        activeLevel = e.target.value || null;
         renderBoard();
     });
     groupBySelect.addEventListener('change', () => renderBoard());
@@ -63,10 +77,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const filteredCourses = allCourses.filter(course => {
             const matchesPlatform = !activePlatform || course.plataforma === activePlatform;
             const matchesCategory = !activeCategory || course.categoria === activeCategory;
+            const matchesLanguage = !activeLanguage || course.idioma === activeLanguage;
+            const matchesLevel = !activeLevel || course.nivel === activeLevel;
             const matchesSearch = course.titulo.toLowerCase().includes(searchTerm) ||
-                course.tags.some(tag => tag.toLowerCase().includes(searchTerm));
-            return matchesPlatform && matchesCategory && matchesSearch;
+                course.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||
+                course.plataforma.toLowerCase().includes(searchTerm);
+            return matchesPlatform && matchesCategory && matchesLanguage && matchesLevel && matchesSearch;
         });
+
+        resultsCounter.textContent = `Mostrando ${filteredCourses.length} curso${filteredCourses.length !== 1 ? 's' : ''}`;
 
         if (filteredCourses.length === 0) {
             boardContainer.innerHTML = '<p>No se encontraron cursos con los filtros seleccionados.</p>';
@@ -81,17 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function renderFlatBoard(courses) {
-        // Use the existing grid container style by not adding extra wrappers, 
-        // but we need to ensure boardContainer has the grid class or style.
-        // In CSS #board-container is the grid.
-        // However, if we switch between grouped and flat, we need to manage the container's display.
-        // The CSS defines #board-container as grid. 
-        // For grouped view, we will append blocks that are NOT cards, so we might need to reset display.
-
-        // Actually, better approach:
-        // If flat: boardContainer is grid.
-        // If grouped: boardContainer is block (containing sections).
-
         boardContainer.style.display = 'grid';
         boardContainer.style.gridTemplateColumns = 'repeat(auto-fill, minmax(220px, 1fr))';
         boardContainer.style.gap = '1.25rem';
@@ -119,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const headerEl = document.createElement('div');
             headerEl.className = 'group-header';
             headerEl.innerHTML = `
-                ${key} 
+                ${key}
                 <span class="group-count">${groupCourses.length}</span>
             `;
 
@@ -160,8 +168,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Removed setActiveFilterButton as it's no longer needed
-
     function hexToRgba(hex, alpha) {
         let r = 0, g = 0, b = 0;
         // Handle 3-digit hex
@@ -185,8 +191,9 @@ document.addEventListener('DOMContentLoaded', () => {
         linkEl.href = course.url;
         linkEl.target = '_blank';
         linkEl.rel = 'noopener noreferrer';
+        linkEl.className = 'card-link';
 
-        // Header with Brand Badge (replacing Logo)
+        // Header with Brand Badge
         const headerEl = document.createElement('div');
         headerEl.className = 'card-header';
 
@@ -197,11 +204,11 @@ document.addEventListener('DOMContentLoaded', () => {
         badgeEl.textContent = course.plataforma;
         badgeEl.style.color = brandColor;
         badgeEl.style.borderColor = brandColor;
-        badgeEl.style.backgroundColor = hexToRgba(brandColor, 0.15); // Added background color
+        badgeEl.style.backgroundColor = hexToRgba(brandColor, 0.15);
 
         headerEl.appendChild(badgeEl);
 
-        // Body with Title and Meta Tags
+        // Body with Title, Description and Meta Tags
         const bodyEl = document.createElement('div');
         bodyEl.className = 'card-body';
 
@@ -209,10 +216,14 @@ document.addEventListener('DOMContentLoaded', () => {
         titleEl.className = 'card-title';
         titleEl.textContent = course.titulo;
 
+        const descriptionEl = document.createElement('p');
+        descriptionEl.className = 'card-description';
+        descriptionEl.textContent = course.descripcion || '';
+
         const metaTagsEl = document.createElement('div');
         metaTagsEl.className = 'card-meta-tags';
 
-        // Role Tag (formerly Category)
+        // Role Tag
         const roleTag = document.createElement('span');
         roleTag.className = 'meta-tag category';
         roleTag.textContent = course.categoria;
@@ -227,21 +238,33 @@ document.addEventListener('DOMContentLoaded', () => {
         langTag.className = 'meta-tag language';
         langTag.textContent = course.idioma;
 
+        // Level Tag
+        const nivelKey = (course.nivel || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+        const nivelTag = document.createElement('span');
+        nivelTag.className = `meta-tag nivel nivel-${nivelKey}`;
+        nivelTag.textContent = course.nivel;
+
+        // Cost Tag
+        const costoTag = document.createElement('span');
+        costoTag.className = `meta-tag costo costo-${course.costo === 'Gratis' ? 'gratis' : 'depago'}`;
+        costoTag.textContent = course.costo;
+
         // Corporate Email Tag (if applicable)
         if (course.requiere_corporativo) {
             const corpTag = document.createElement('span');
             corpTag.className = 'meta-tag corporate';
-            // Briefcase icon + text
             corpTag.innerHTML = '💼 Company Email';
             metaTagsEl.appendChild(corpTag);
         }
 
-        // Note: Platform tag removed from body as it is now the header badge
         metaTagsEl.appendChild(roleTag);
         metaTagsEl.appendChild(formatTag);
         metaTagsEl.appendChild(langTag);
+        metaTagsEl.appendChild(nivelTag);
+        metaTagsEl.appendChild(costoTag);
 
         bodyEl.appendChild(titleEl);
+        bodyEl.appendChild(descriptionEl);
         bodyEl.appendChild(metaTagsEl);
 
         // Footer with Topic Tags
@@ -258,7 +281,17 @@ document.addEventListener('DOMContentLoaded', () => {
         linkEl.appendChild(headerEl);
         linkEl.appendChild(bodyEl);
         linkEl.appendChild(footerEl);
+
+        // CTA Button (sibling to linkEl, not nested inside)
+        const ctaEl = document.createElement('a');
+        ctaEl.href = course.url;
+        ctaEl.target = '_blank';
+        ctaEl.rel = 'noopener noreferrer';
+        ctaEl.className = 'card-cta';
+        ctaEl.textContent = 'Ir al curso →';
+
         cardEl.appendChild(linkEl);
+        cardEl.appendChild(ctaEl);
 
         return cardEl;
     }
